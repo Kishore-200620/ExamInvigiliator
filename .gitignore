@@ -1,0 +1,128 @@
+# =====================================================
+# ExamGuardian AI - .gitignore
+# =====================================================
+
+# -------------------------
+# Python
+# -------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Compiled Python extensions
+*.so
+
+# -------------------------
+# Virtual Environments
+# -------------------------
+.venv/
+venv/
+env/
+ENV/
+
+# -------------------------
+# Environment Variables
+# -------------------------
+.env
+
+# -------------------------
+# Logs
+# -------------------------
+*.log
+logs/
+
+# -------------------------
+# Model Weights
+# (Download separately)
+# -------------------------
+models/*.pt
+models/*.onnx
+models/*.engine
+models/*.torchscript
+models/*.tflite
+
+# Keep the folder
+!models/.gitkeep
+
+# -------------------------
+# Output Files
+# -------------------------
+outputs/*
+!outputs/.gitkeep
+
+# -------------------------
+# Temporary Files
+# -------------------------
+*.tmp
+*.temp
+*.bak
+*.swp
+
+# -------------------------
+# Images & Videos Generated
+# -------------------------
+*.avi
+*.mp4
+*.mov
+*.mkv
+
+# -------------------------
+# Database Files
+# -------------------------
+*.db
+*.sqlite
+*.sqlite3
+
+# -------------------------
+# Jupyter
+# -------------------------
+.ipynb_checkpoints/
+
+# -------------------------
+# Coverage / Testing
+# -------------------------
+.coverage
+.pytest_cache/
+htmlcov/
+
+# -------------------------
+# Build
+# -------------------------
+build/
+dist/
+*.egg-info/
+
+# -------------------------
+# IDE
+# -------------------------
+.vscode/
+.idea/
+
+# -------------------------
+# Operating System
+# -------------------------
+.DS_Store
+Thumbs.db
+
+# -------------------------
+# Ultralytics Cache
+# -------------------------
+runs/
+
+# -------------------------
+# Torch Cache
+# -------------------------
+.cache/
+torch_cache/
+
+# -------------------------
+# ByteTrack Cache
+# -------------------------
+*.cache
+
+# -------------------------
+# Keep Folder Structure
+# -------------------------
+!data/.gitkeep
+!outputs/.gitkeep
+!models/.gitkeep
