@@ -56,12 +56,12 @@ def ious(atlbrs, btlbrs):
     """
 
     if len(atlbrs) == 0 or len(btlbrs) == 0:
-        return np.zeros((len(atlbrs), len(btlbrs)), dtype=np.float32)
+        return np.zeros((len(atlbrs), len(btlbrs)), dtype=float)
 
-    atlbrs = np.asarray(atlbrs, dtype=np.float32)
-    btlbrs = np.asarray(btlbrs, dtype=np.float32)
+    atlbrs = np.asarray(atlbrs, dtype=float)
+    btlbrs = np.asarray(btlbrs, dtype=float)
 
-    iou_matrix = np.zeros((len(atlbrs), len(btlbrs)), dtype=np.float32)
+    iou_matrix = np.zeros((len(atlbrs), len(btlbrs)), dtype=float)
 
     for i, a in enumerate(atlbrs):
 
@@ -138,13 +138,13 @@ def embedding_distance(tracks, detections, metric='cosine'):
     :return: cost_matrix np.ndarray
     """
 
-    cost_matrix = np.zeros((len(tracks), len(detections)), dtype=np.float)
+    cost_matrix = np.zeros((len(tracks), len(detections)), dtype=float)
     if cost_matrix.size == 0:
         return cost_matrix
-    det_features = np.asarray([track.curr_feat for track in detections], dtype=np.float)
+    det_features = np.asarray([track.curr_feat for track in detections], dtype=float)
     #for i, track in enumerate(tracks):
         #cost_matrix[i, :] = np.maximum(0.0, cdist(track.smooth_feat.reshape(1,-1), det_features, metric))
-    track_features = np.asarray([track.smooth_feat for track in tracks], dtype=np.float)
+    track_features = np.asarray([track.smooth_feat for track in tracks], dtype=float)
     cost_matrix = np.maximum(0.0, cdist(track_features, det_features, metric))  # Nomalized features
     return cost_matrix
 

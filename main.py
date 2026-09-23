@@ -10,6 +10,7 @@ import cv2
 from app.camera.camera import Camera
 from app.detection.detector import Detector
 from app.utils.logger import logger
+from app.tracking.tracker import Tracker
 CLASS_NAMES = {
     0: "Person",
     67: "Phone",
@@ -25,6 +26,7 @@ def main():
     camera = Camera()
 
     detector = Detector()
+    tracker = Tracker()
 
     while True:
 
@@ -35,17 +37,34 @@ def main():
             break
 
         detections = detector.detect(frame)
+        tracks = tracker.update(
+            detections,
+            frame
+        )
+        for track in tracks:
 
+            x1, y1, x2, y2 = map(int, track.tlbr)
+
+            cv2.putText(
+                frame,
+                f"ID {track.track_id}",
+                (x1, y1 - 30),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.7,
+                (0, 0, 255),
+                2,
+            )
+        print(f"Persons detected: {sum(1 for d in detections if d['class_id'] == 0)}")
         for detection in detections:
-
+ 
             x1, y1, x2, y2 = map(int, detection["bbox"])
 
             confidence = detection["confidence"]
 
             label = CLASS_NAMES.get(
-    detection["class_id"],
-    "Unknown"
-)
+                detection["class_id"],
+                "Unknown"
+            )
 
             cv2.rectangle(
                 frame,

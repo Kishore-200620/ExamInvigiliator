@@ -37,6 +37,6 @@ class InferenceEngine:
     conf=DETECTION_CONFIDENCE,
     iou=DETECTION_IOU,
     device=DEVICE,
-    augment=True,
+    augment=False,
     verbose=False,
 )

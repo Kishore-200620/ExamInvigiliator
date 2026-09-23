@@ -24,9 +24,9 @@ CAMERA_FPS = 30
 # ==========================================================
 # Detection Settings
 # ==========================================================
-DETECTION_MODEL_PATH = DETECTION_MODEL_DIR / "yolo11l.pt"
+DETECTION_MODEL_PATH = DETECTION_MODEL_DIR / "yolo26l.pt"
 DETECTION_CONFIDENCE = 0.25
-DETECTION_IMAGE_SIZE = 1536
+DETECTION_IMAGE_SIZE = 2048
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 USE_HALF_PRECISION = DEVICE == "cuda"
 # ==========================================================
