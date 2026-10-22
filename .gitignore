@@ -1,0 +1,235 @@
+# Python caches and environments
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+# Backup files
+*.bak
+*.backup
+*.old
+*.tmp
+
+# Media and generated evidence
+*.mp4
+*.avi
+*.mov
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+# Test and evaluation artifacts
+tests/
+evaluation/
+test-results.txt
+
+# Runtime data
+clips/
+sample_clips/
+**/sample_clips/
+logs/
+**/logs/
+*.sqlite
+*.sqlite3
+*.db
+
+# Python environments and caches
+.venv/
+__pycache__/
+.pytest_cache/
+
+# Frontend dependencies and builds
+frontend/node_modules/
+frontend/dist/
+.mypy_cache/
+.ruff_cache/
+.pytype/
+.ipynb_checkpoints/
+.coverage
+htmlcov/
+venv/
+.venv/
+env/
+ENV/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Frontend dependencies and build output
+**/node_modules/
+**/dist/
+**/build/
+**/.vite/
+**/.cache/
+**/.output/
+**/.turbo/
+**/.parcel-cache/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Logs and runtime files
+logs/
+**/logs/
+*.log
+*.pid
+*.seed
+
+# Generated recordings, evidence, exports, and temporary media
+clips/
+evidence/
+evidence_smoke/
+evidence_test/
+recordings/
+screenshots/
+exports/
+captures/
+temp/
+tmp/
+runs/
+sample_clips/
+
+# Local databases and caches
+*.db
+*.sqlite
+*.sqlite3
+*.cache
+opencv_cache/
+
+# Large ML model artifacts
+*.pt
+*.onnx
+*.engine
+*.safetensors
+
+# IDE and OS files
+.vscode/
+.idea/
+*.iml
+.DS_Store
+Thumbs.db
+desktop.ini
+*.suo
+*.swp
+*.swo
+
+# Packaging and test reports
+*.egg-info/
+.eggs/
+*.spec
+coverage.xml
+
+# Project-local documents and generated paper output
+PPT paper/
+doc.txt
+
+
+# Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Runtime data, databases, logs, and evidence
+clips/
+sample_clips/
+**/sample_clips/
+**/evidence/
+**/processed/
+logs/
+**/logs/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# Test and evaluation artifacts
+tests/
+evaluation/
+test-results.txt
+coverage.xml
+htmlcov/
+
+# Temporary files and backups
+*.bak
+*.backup
+*.tmp
+*.old
+*.before_*
+*.candidate.py
+
+# Python diagnostic scripts (root-level)
+analyze_category3_churn.py
+analyze_category3_results.py
+evaluation_category3_diagnostic.py
+Category4_ReadOnly_Verification_Observer_v3.ps1
+benchmark_keypoint_geometry.py
+debug_head.py
+verify_head_pose.py
+prepare_category4_patch.py
+
+# Model artifacts (download separately if needed)
+*.pt
+*.pth
+*.onnx
+*.task
+
+# Frontend dependencies and generated builds
+frontend/node_modules/
+frontend/.output/
+frontend/.tanstack/
+frontend/.wrangler/
+frontend/dist/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# Test and evaluation artifacts
+tests/
+evaluation/
+test-results.txt
+
+# Videos, images, evidence and runtime data
+clips/
+sample_clips/
+**/sample_clips/
+**/evidence/
+**/processed/
+logs/
+**/logs/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.mp4
+*.avi
+*.mov
+*.jpg
+*.jpeg
+*.png
+*.webp
+
+# Backup and temporary files
+*.bak
+*.backup
+*.tmp
+*.old
+*.candidate.py
+
+# Nested README files; keep the root README.md
+/backend/README.md
+/frontend/README.md
+/frontend/src/routes/README.md
