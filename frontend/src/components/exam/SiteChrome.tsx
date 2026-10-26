@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { useBackendStatus } from "@/hooks/use-backend-status";
 import { fetchViolationSummary } from "@/lib/api";
-import heroVideo from "@/assets/video.mp4";
 
 const nav: ReadonlyArray<readonly [string, string]> = [
   ["Features", "#how"], ["Demo", "#demo"], ["Technology", "#technology"], ["Use cases", "#use-cases"],
@@ -86,15 +85,7 @@ export function Hero() {
       <div data-hero-image className="absolute inset-0 scale-[1.02] overflow-hidden">
         {/* Gradient fallback — sits behind the video, visible only while video loads or if it fails */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_68%_42%,color-mix(in_oklab,var(--primary)_18%,transparent),transparent_45%),linear-gradient(135deg,var(--surface),var(--background)_70%)]" />
-        <video
-          src={heroVideo}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="absolute inset-0 h-full w-full object-cover"
-          aria-hidden="true"
-        />
+        
       </div>
       <div className="absolute inset-0 bg-[linear-gradient(90deg,var(--background)_0%,color-mix(in_oklab,var(--background)_88%,transparent)_32%,color-mix(in_oklab,var(--background)_20%,transparent)_78%),linear-gradient(0deg,var(--background)_0%,transparent_42%)]" />
       <div className="relative mx-auto flex min-h-[760px] max-w-[1440px] items-center px-5 pb-28 pt-28 md:min-h-screen md:px-10 xl:px-14">
